@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis</title>
+    <link rel="stylesheet" type="text/css" href="static/analysis.css">
+</head>
+<body>
+    <!-- Recent Analysis Section -->
+    <div class="analysis-section">
+        <h1>Recent Analysis</h1>
+
+        <div class="graph-container">
+            <h2>Mean Availability of Bikes (Recent)</h2>
+            <img src="{{ url_for('static', filename=graph1_path) }}" alt="Graph 1">
+        </div>
+
+        <div class="graph-container">
+            <h2>Mean Availability of Bikes</h2>
+            <img src="{{ url_for('static', filename=graph2_path) }}" alt="Graph 2">
+        </div>
+
+        <div class="graph-container">
+            <h2>Station Clusters</h2>
+            <p>Cluster 0: Mean Availability - 6.44</p>
+            <!-- Add other cluster details -->
+            <img src="{{ url_for('static', filename=graph3_path) }}" alt="Graph 3">
+        </div>
+    </div>
+
+    <!-- Historical Analysis Section -->
+    <div class="analysis-section">
+        <h1>Historical Analysis</h1>
+
+        <div class="graph-container">
+            <h2>Average Availability of Bikes past 4 Months</h2>
+            <img src="{{ url_for('static', filename=graph4_path) }}" alt="Graph 4">
+        </div>
+
+        <div class="graph-container">
+            <h2>Average Availability of Bikes by day of the week</h2>
+            <img src="{{ url_for('static', filename=graph5_path) }}" alt="Graph 5">
+        </div>
+
+        <div class="graph-container">
+            <h2>Hourly Availability of Bikes Heatmap</h2>
+            <img src="{{ url_for('static', filename=graph6_path) }}" alt="Graph 6">
+        </div>
+    </div>
+
+    <div class="stations-high-availability">
+        <h2>Stations with Consistently High Availability</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>STATION ID</th>
+                    <th>NAME</th>
+                    <th>AVAILABLE_BIKES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>92</td>
+                    <td>HEUSTON BRIDGE (NORTH)</td>
+                    <td>28.170898</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>HEUSTON STATION (CENTRAL)</td>
+                    <td>25.696551</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>TALBOT STREET</td>
+                    <td>24.487655</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>HEUSTON STATION (CAR PARK)</td>
+                    <td>23.412537</td>
+                </tr>
+                <tr>
+                    <td>86</td>
+                    <td>PARKGATE STREET</td>
+                    <td>23.289441</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Stations with consistently low availability -->
+    <div class="stations-low-availability">
+        <h2>Stations with Consistently Low Availability</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>STATION ID</th>
+                    <th>NAME</th>
+                    <th>AVAILABLE_BIKES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>61</td>
+                    <td>HARDWICKE PLACE</td>
+                    <td>3.519524</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>HARDWICKE STREET</td>
+                    <td>3.115742</td>
+                </tr>
+                <tr>
+                    <td>79</td>
+                    <td>ECCLES STREET EAST</td>
+                    <td>2.961478</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>PARNELL SQUARE NORTH</td>
+                    <td>2.379443</td>
+                </tr>
+                <tr>
+                    <td>116</td>
+                    <td>BROADSTONE</td>
+                    <td>2.148836</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
